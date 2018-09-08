@@ -136,7 +136,6 @@ func (m *sourceManager) Collect(baseCtx context.Context) (*MetricsBatch, error) 
 		srcBatch := <-responseChannel
 		if err != nil {
 			errs = append(errs, err)
-			continue
 		}
 
 		res.Nodes = append(res.Nodes, srcBatch.Nodes...)
